@@ -7,6 +7,8 @@
 QT       += core gui
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
+CONFIG -= c++11
+QMAKE_CXXFLAGS += -std=c++1z
 
 TARGET = line_balance_project
 TEMPLATE = app
@@ -24,8 +26,22 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 
 SOURCES += main.cc\
-        lb_main.cc
+        lb_main.cc \
+    interface_control/about_us_dlg.cc \
+    interface_control/ribbon.cc \
+    interface_control/ribbon_lb.cc \
+    lb_widget.cc
 
-HEADERS  += lb_main.h
+HEADERS  += lb_main.h \
+    interface_control/about_us_dlg.h \
+    interface_control/ribbon.h \
+    interface_control/ribbon_lb.h \
+    lb_widget.h
 
-FORMS    += lb_main.ui
+FORMS    += lb_main.ui \
+    lb_widget.ui
+
+LIBS += -lboost_locale
+LIBS += -liconv
+LIBS += -lboost_filesystem
+LIBS += -lboost_system
