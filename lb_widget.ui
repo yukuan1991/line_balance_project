@@ -15,9 +15,9 @@
   </property>
   <layout class="QHBoxLayout" name="horizontalLayout_5">
    <item>
-    <layout class="QHBoxLayout" name="horizontalLayout_4" stretch="0,0,1,1">
+    <layout class="QHBoxLayout" name="horizontalLayout_4" stretch="0,0,5,0,0">
      <item>
-      <widget class="QListWidget" name="listWidget"/>
+      <widget class="stack_panel" name="listWidget"/>
      </item>
      <item>
       <widget class="Line" name="line">
@@ -31,17 +31,24 @@
        <property name="widgetResizable">
         <bool>true</bool>
        </property>
-       <widget class="QWidget" name="scrollAreaWidgetContents">
+       <widget class="station_area" name="widget">
         <property name="geometry">
          <rect>
           <x>0</x>
           <y>0</y>
-          <width>273</width>
+          <width>261</width>
           <height>533</height>
          </rect>
         </property>
         <layout class="QHBoxLayout" name="horizontalLayout"/>
        </widget>
+      </widget>
+     </item>
+     <item>
+      <widget class="Line" name="line_2">
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
       </widget>
      </item>
      <item>
@@ -51,7 +58,7 @@
        </property>
        <widget class="QWidget" name="tab">
         <attribute name="title">
-         <string>Tab 1</string>
+         <string>关键参数</string>
         </attribute>
         <layout class="QHBoxLayout" name="horizontalLayout_3">
          <item>
@@ -62,71 +69,158 @@
               <layout class="QGridLayout" name="gridLayout">
                <item row="0" column="0">
                 <widget class="QLabel" name="label">
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>50</height>
+                  </size>
+                 </property>
                  <property name="text">
-                  <string>TextLabel</string>
+                  <string>节拍时间</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
                  </property>
                 </widget>
                </item>
                <item row="0" column="1">
-                <widget class="QLabel" name="label_2">
+                <widget class="QLabel" name="label_show_takt">
+                 <property name="minimumSize">
+                  <size>
+                   <width>65</width>
+                   <height>50</height>
+                  </size>
+                 </property>
                  <property name="text">
-                  <string>TextLabel</string>
+                  <string>N/A</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
                  </property>
                 </widget>
                </item>
                <item row="1" column="0">
                 <widget class="QLabel" name="label_3">
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>50</height>
+                  </size>
+                 </property>
                  <property name="text">
-                  <string>TextLabel</string>
+                  <string>效率</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
                  </property>
                 </widget>
                </item>
                <item row="1" column="1">
                 <widget class="QLabel" name="label_4">
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>50</height>
+                  </size>
+                 </property>
                  <property name="text">
-                  <string>TextLabel</string>
+                  <string>N/A</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
                  </property>
                 </widget>
                </item>
                <item row="2" column="0">
                 <widget class="QLabel" name="label_5">
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>50</height>
+                  </size>
+                 </property>
                  <property name="text">
-                  <string>TextLabel</string>
+                  <string>最大周期时间(瓶颈时间)</string>
                  </property>
                 </widget>
                </item>
                <item row="2" column="1">
                 <widget class="QLabel" name="label_6">
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>50</height>
+                  </size>
+                 </property>
                  <property name="text">
-                  <string>TextLabel</string>
+                  <string>N/A</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
                  </property>
                 </widget>
                </item>
                <item row="3" column="0">
                 <widget class="QLabel" name="label_7">
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>50</height>
+                  </size>
+                 </property>
                  <property name="text">
-                  <string>TextLabel</string>
+                  <string>线平衡率</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
                  </property>
                 </widget>
                </item>
                <item row="3" column="1">
                 <widget class="QLabel" name="label_8">
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>50</height>
+                  </size>
+                 </property>
                  <property name="text">
-                  <string>TextLabel</string>
+                  <string>N/A</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
                  </property>
                 </widget>
                </item>
                <item row="4" column="0">
                 <widget class="QLabel" name="label_9">
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>50</height>
+                  </size>
+                 </property>
                  <property name="text">
-                  <string>TextLabel</string>
+                  <string>工位数量</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
                  </property>
                 </widget>
                </item>
                <item row="4" column="1">
                 <widget class="QLabel" name="label_10">
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>50</height>
+                  </size>
+                 </property>
                  <property name="text">
-                  <string>TextLabel</string>
+                  <string>N/A</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
                  </property>
                 </widget>
                </item>
@@ -170,6 +264,19 @@
    </item>
   </layout>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>stack_panel</class>
+   <extends>QListWidget</extends>
+   <header>stack_panel.h</header>
+  </customwidget>
+  <customwidget>
+   <class>station_area</class>
+   <extends>QWidget</extends>
+   <header>station_area.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
  <resources/>
  <connections/>
 </ui>

@@ -6,6 +6,7 @@
 #include <QStyleFactory>
 
 
+
 void set_style ()
 {
     using namespace boost::filesystem;
@@ -37,6 +38,7 @@ int main(int argc, char *argv[])
     set_style();
     lb_main w;
     w.show();
+
 
     return a.exec();
 }

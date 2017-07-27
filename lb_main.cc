@@ -4,6 +4,7 @@
 #include "lb_widget.h"
 #include <memory>
 #include <QMdiSubWindow>
+#include "interface_control/takt_time_dlg.h"
 
 using namespace std;
 
@@ -28,6 +29,7 @@ void lb_main::init_conn()
 {
     connect(ui->widget_ribbon, &ribbon_lb::file_menu_triggered, [this] (const QString & s) { file_operations(s); });
 
+    connect(ui->widget_ribbon, &ribbon_lb::time, this, &lb_main::takt_time_exec);
     connect(ui->widget_ribbon, &ribbon_lb::help, this, &lb_main::help_advice);
 }
 
@@ -60,6 +62,17 @@ void lb_main::file_new()
     auto w = create_window ("未命名");
 }
 
+void lb_main::takt_time_exec()
+{
+    auto w = active_window();
+    if(w == nullptr)
+    {
+        return;
+    }
+
+    w->takt_time_exec();
+}
+
 void lb_main::help_advice()
 {
     const QString text = R"(<html><head/><body><p>如果您有任何需求与改进建议，</p><p>请随时联系IEToolkit君qq3350436646</p>
@@ -80,4 +93,17 @@ not_null<lb_widget *> lb_main::create_window(const QString &title)
     w->setWindowState (Qt::WindowMaximized);
 
     return lb_win.release ();
+}
+
+lb_widget *lb_main::active_window()
+{
+    if(QMdiSubWindow* active_subwindow = ui->mdi->activeSubWindow())
+    {
+        lb_widget* w = dynamic_cast<lb_widget*>(active_subwindow->widget());
+        return w;
+    }
+    else
+    {
+        return nullptr;
+    }
 }

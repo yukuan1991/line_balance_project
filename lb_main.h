@@ -25,9 +25,11 @@ private:
     void file_new ();
 
 private:
+    void takt_time_exec();
     void help_advice();
 private:
     not_null<lb_widget*> create_window (const QString & title);
+    lb_widget* active_window ();
 private:
     Ui::lb_main *ui;
 };

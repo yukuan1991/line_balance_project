@@ -5,7 +5,7 @@
 #-------------------------------------------------
 
 QT       += core gui
-
+QT       += core gui widgets xlsx
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 CONFIG -= c++11
 QMAKE_CXXFLAGS += -std=c++1z
@@ -30,13 +30,23 @@ SOURCES += main.cc\
     interface_control/about_us_dlg.cc \
     interface_control/ribbon.cc \
     interface_control/ribbon_lb.cc \
-    lb_widget.cc
+    lb_widget.cc \
+    stack_panel.cpp \
+    station_area.cpp \
+    line_label.cpp \
+    interface_control/takt_time_dlg.cc \
+    data_balance.cpp
 
 HEADERS  += lb_main.h \
     interface_control/about_us_dlg.h \
     interface_control/ribbon.h \
     interface_control/ribbon_lb.h \
-    lb_widget.h
+    lb_widget.h \
+    stack_panel.h \
+    station_area.h \
+    line_label.h \
+    interface_control/takt_time_dlg.h \
+    data_balance.h
 
 FORMS    += lb_main.ui \
     lb_widget.ui
