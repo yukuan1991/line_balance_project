@@ -1,4 +1,4 @@
-#ifndef STATION_AREA_H
+﻿#ifndef STATION_AREA_H
 #define STATION_AREA_H
 
 #include <functional>
@@ -41,7 +41,7 @@ signals:
 public slots:
 
 private:
-    static constexpr unsigned label_height = 20;
+    static constexpr unsigned label_height = 30;
 private:
     unsigned list_height_;
     unsigned startline_height_;

@@ -26,11 +26,16 @@ public:
     ~lb_widget();
 
     void takt_time_exec();
+    void on_excel_open ();
+    void on_excel_save ();
+    void auto_assign();
 private:
+    void init();
     void init_conn();
 private:
     void takt_time_confirm();
     void takt_time_cancel();
+
 private: //functions
     void refresh_data ();
     void read_excel (const QString&);
@@ -40,10 +45,10 @@ private:
     Ui::lb_widget *ui;
 
     data_balance excel_data_;
-    float takt_time_ = 0;
-    float max_ct_ = 0;
-    float balance_rate_ = 0;
-    float efficiency_ = 0;
+    double takt_time_ = 0;
+    double max_ct_ = 0;
+    double balance_rate_ = 0;
+    double efficiency_ = 0;
     unsigned station_number_ = 0;
     QString current_excel_ = {};
 };

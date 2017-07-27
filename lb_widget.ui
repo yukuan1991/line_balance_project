@@ -15,9 +15,9 @@
   </property>
   <layout class="QHBoxLayout" name="horizontalLayout_5">
    <item>
-    <layout class="QHBoxLayout" name="horizontalLayout_4" stretch="0,0,5,0,0">
+    <layout class="QHBoxLayout" name="horizontalLayout_4" stretch="0,0,20,0,0">
      <item>
-      <widget class="stack_panel" name="listWidget"/>
+      <widget class="stack_panel" name="list_unassigned"/>
      </item>
      <item>
       <widget class="Line" name="line">
@@ -36,11 +36,16 @@
          <rect>
           <x>0</x>
           <y>0</y>
-          <width>261</width>
-          <height>533</height>
+          <width>1000</width>
+          <height>1000</height>
          </rect>
         </property>
-        <layout class="QHBoxLayout" name="horizontalLayout"/>
+        <property name="minimumSize">
+         <size>
+          <width>1000</width>
+          <height>1000</height>
+         </size>
+        </property>
        </widget>
       </widget>
      </item>
@@ -116,7 +121,7 @@
                 </widget>
                </item>
                <item row="1" column="1">
-                <widget class="QLabel" name="label_4">
+                <widget class="QLabel" name="label_efficiency">
                  <property name="minimumSize">
                   <size>
                    <width>0</width>
@@ -145,7 +150,7 @@
                 </widget>
                </item>
                <item row="2" column="1">
-                <widget class="QLabel" name="label_6">
+                <widget class="QLabel" name="label_maxct">
                  <property name="minimumSize">
                   <size>
                    <width>0</width>
@@ -177,7 +182,7 @@
                 </widget>
                </item>
                <item row="3" column="1">
-                <widget class="QLabel" name="label_8">
+                <widget class="QLabel" name="label_balance_rate">
                  <property name="minimumSize">
                   <size>
                    <width>0</width>
@@ -209,7 +214,7 @@
                 </widget>
                </item>
                <item row="4" column="1">
-                <widget class="QLabel" name="label_10">
+                <widget class="QLabel" name="label_station_number">
                  <property name="minimumSize">
                   <size>
                    <width>0</width>

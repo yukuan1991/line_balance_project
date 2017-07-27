@@ -20,11 +20,15 @@ public:
 
 private:
     void init_conn();
+    void set_button_enabled();
 private:
     void file_operations(const QString& s);
     void file_new ();
 
 private:
+    void auto_assign();
+    void import();
+    void export_clicked();
     void takt_time_exec();
     void help_advice();
 private:
