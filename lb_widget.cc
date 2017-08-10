@@ -15,9 +15,6 @@ lb_widget::lb_widget(QWidget *parent) :
     takt_time_dlg_ = std::make_unique<takt_time_dlg> (this);
     init();
     init_conn();
-//    ui->scrollArea->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOn);
-//    ui->scrollArea->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOn);
-
 }
 
 lb_widget::~lb_widget()

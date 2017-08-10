@@ -52,18 +52,6 @@ void lb_main::file_operations(const QString &s)
     {
         file_new();
     }
-//    else if(s == "打开")
-//    {
-//        file_open();
-//    }
-//    else if(s == "保存")
-//    {
-//        file_save();
-//    }
-//    else if(s == "另存为")
-//    {
-//        file_save_as();
-//    }
     else if(s == "退出")
     {
         close();
