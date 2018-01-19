@@ -30,7 +30,6 @@ private:
     void import();
     void export_clicked();
     void takt_time_exec();
-    void help_advice();
 private:
     not_null<lb_widget*> create_window (const QString & title);
     lb_widget* active_window ();

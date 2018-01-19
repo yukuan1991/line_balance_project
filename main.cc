@@ -4,7 +4,12 @@
 #include <boost/filesystem.hpp>
 #include <boost/range/adaptors.hpp>
 #include <QStyleFactory>
+#include "verification.h"
+#include <QTimer>
+#include <chrono>
 
+using namespace std::string_literals;
+using namespace std::chrono_literals;
 
 
 void set_style ()
@@ -35,10 +40,22 @@ int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
 
+    if (!verification_process ())
+    {
+        return -1;
+    }
+
     set_style();
     lb_main w;
     w.show();
 
+    QTimer timer;
+    timer.setInterval (1s);
+    timer.setSingleShot (true);
+    QObject::connect (&timer, &QTimer::timeout, [&] { check_date (); timer.start (); });
+    timer.start ();
+
+    return a.exec();
 
     return a.exec();
 }

@@ -1,6 +1,5 @@
 ﻿#include "lb_main.h"
 #include "ui_lb_main.h"
-#include "interface_control/about_us_dlg.h"
 #include "lb_widget.h"
 #include <memory>
 #include <QMdiSubWindow>
@@ -35,8 +34,6 @@ void lb_main::init_conn()
     connect(ui->widget_ribbon, &ribbon_lb::import, this, &lb_main::import);
     connect(ui->widget_ribbon, &ribbon_lb::export_clicked, this, &lb_main::export_clicked);
     connect(ui->widget_ribbon, &ribbon_lb::time, this, &lb_main::takt_time_exec);
-    connect(ui->widget_ribbon, &ribbon_lb::help, this, &lb_main::help_advice);
-
     connect(ui->mdi, &QMdiArea::subWindowActivated, ui->widget_ribbon, &ribbon_lb::set_enabled);
 }
 
@@ -105,14 +102,6 @@ void lb_main::takt_time_exec()
     }
 
     w->takt_time_exec();
-}
-
-void lb_main::help_advice()
-{
-    const QString text = R"(<html><head/><body><p>如果您有任何需求与改进建议，</p><p>请随时联系IEToolkit君qq3350436646</p>
-                         <p><span style=" font-weight:600; color:red">加好友请扫右边二维码---&gt;</span></p></body></html>)";
-    const QString qr_code = R"( <a href = "www.shionto.com"> <img src="./png/about-us.png" width="300" height = "400"/></a>)";
-    about_us_dlg::show_info(text, qr_code);
 }
 
 not_null<lb_widget *> lb_main::create_window(const QString &title)
