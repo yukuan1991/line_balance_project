@@ -36,11 +36,9 @@ SOURCES += main.cc\
     line_label.cpp \
     interface_control/takt_time_dlg.cc \
     data_balance.cpp \
-    verification.cc \
-    verification_dlg.cc \
-    encryption.cc \
-    net_utils.cc \
-    des.cc
+    verification/des.cc \
+    verification/encryption.cc \
+    verification/verification.cpp
 
 HEADERS  += lb_main.h \
     interface_control/ribbon.h \
@@ -51,15 +49,13 @@ HEADERS  += lb_main.h \
     line_label.h \
     interface_control/takt_time_dlg.h \
     data_balance.h \
-    verification.h \
-    verification_dlg.h \
-    encryption.h \
-    net_utils.h \
-    des.h
+    verification/des.h \
+    verification/encryption.h \
+    verification/verification.h \
+    verification/json.hpp
 
 FORMS    += lb_main.ui \
-    lb_widget.ui \
-    verification_dlg.ui
+    lb_widget.ui
 
 LIBS += -lboost_filesystem
 LIBS += -lboost_system

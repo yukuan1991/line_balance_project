@@ -4,7 +4,7 @@
 #include <boost/filesystem.hpp>
 #include <boost/range/adaptors.hpp>
 #include <QStyleFactory>
-#include "verification.h"
+#include "verification/verification.h"
 #include <QTimer>
 #include <chrono>
 
