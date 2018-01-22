@@ -18,7 +18,7 @@
 #include <base/utils/charset.hpp>
 #include "json.hpp"
 
-#define SERIAL_PATH "../serial"
+#define SERIAL_PATH "serial"
 #define DES_KEY "1234556789012345672IETools"
 #define UPDATE_SERVER_ADDR "116.62.10.199"
 

@@ -56,6 +56,4 @@ int main(int argc, char *argv[])
     timer.start ();
 
     return a.exec();
-
-    return a.exec();
 }
