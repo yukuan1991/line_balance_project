@@ -5,6 +5,19 @@ ribbon_lb::ribbon_lb(QWidget *parent)
     : ribbon(parent)
 {
     {
+        std::array<ui_group, 1> edit;
+
+        button_cell b;
+
+
+        b.add ("节拍时间", QPixmap ("png/节拍时间.png"), time_);
+        b.set_title("属性设置");
+
+        edit[0] = ::move (b);
+
+        add_tab(edit, "设置");
+    }
+    {
         std::array<ui_group, 2> edit;
 
         button_cell b;
@@ -21,19 +34,6 @@ ribbon_lb::ribbon_lb(QWidget *parent)
         edit[1] = ::move (b);
 
         add_tab(edit, "编辑");
-    }
-    {
-        std::array<ui_group, 1> edit;
-
-        button_cell b;
-
-
-        b.add ("节拍时间", QPixmap ("png/节拍时间.png"), time_);
-        b.set_title("属性设置");
-
-        edit[0] = ::move (b);
-
-        add_tab(edit, "设置");
     }
 
 
