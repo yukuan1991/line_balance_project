@@ -24,12 +24,12 @@ ribbon_lb::ribbon_lb(QWidget *parent)
 
         b.add ("导入", QPixmap ("png/导入.png"), import_);
         b.add ("导出", QPixmap ("png/导出.png"), export_);
-        b.set_title("导入EXCEL");
+        b.set_title("文件(excel file)");
 
         edit[0] = ::move (b);
 
         b.add ("作业内容", QPixmap ("png/作业内容.png"), job_content_);
-        b.set_title("自动分配");
+        b.set_title("文档操作");
 
         edit[1] = ::move (b);
 
